@@ -1,4 +1,4 @@
-//  Sesión 15 - 21/09/2021
+//  Sesión 16 22/09/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -24,7 +24,7 @@ void bases()
 	printf("B3 en base 16 es %o base 8.\n", a);
 }
 
-int main()
+void primarios()
 {
 	// Jerarquía Nivel 1 - Primarios
 	// Llamada a función  ( ) 
@@ -38,11 +38,44 @@ int main()
 	// Operador Indice de arreglo  [ ] 
 	Arreglo[7] = 2000;
 
-	//  Operador Punto (estructura)  ( . )
+	//  Operador Punto (estructuras)  ( . )
 	Juanito.edad = 30;
 	strcpy(Juanito.nombre, "Juanito Perez");
 	PRINT1(s, Juanito.nombre);
 	PRINT1(d, Juanito.edad);
+
+	// Operador flecha (estructuras) ( -> )
+	ptrJuanito = &Juanito;
+	ptrJuanito -> edad = 40;
+	strcpy(ptrJuanito->nombre, "Pedrito López");
+	PRINT1(s, ptrJuanito->nombre);
+	PRINT1(d, ptrJuanito->edad);
+}
+
+int main()
+{
+	// Jerarquía nivel 2 - Operadores Unarios
+	
+	// En C, lo unico que es falso es 0, lo demás es verdadero
+	a = 0;
+	if(a)
+		printf("Es es verdadero!\n");
+	else
+		printf("Esto es falso!\n");
+	a = 1;
+	if(a)
+		printf("Es es verdadero!\n");
+	else
+		printf("Esto es falso!\n");
+
+	// Operador Negación  ( ! )
+	a = 0;
+	PRINT2(d, a, !a);
+	a = 1;
+	PRINT2(d, a, !a);
+	a = 0;
+	PRINT2(d, a, !!!!!!!!!!!!!!!!a);
+
 
 	system("pause");
 	return 0;
