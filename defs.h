@@ -8,3 +8,17 @@
 #define PRINT3(f, x1,x2,x3) PR(f, x1), PRINT2(f, x2,x3)
 #define PRINT4(f, x1,x2,x3,x4) PR(f, x1), PRINT3(f, x2,x3,x4)
 #define PRINT5(f, x1,x2,x3,x4,x5) PR(f, x1), PRINT4(f, x2,x3,x4,x5)
+
+int Arreglo[15];
+
+struct Persona
+{
+	char nombre[30];
+	int edad;
+} Juanito, *ptrJuanito;
+
+int a, b, c, d;
+char car;
+float e, f, g;
+double h;
+int *ptr;
