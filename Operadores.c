@@ -1,4 +1,4 @@
-//  Sesión 16 22/09/2021
+//  Sesión 17 23/09/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -76,6 +76,46 @@ int main()
 	a = 0;
 	PRINT2(d, a, !!!!!!!!!!!!!!!!a);
 
+	// Operadores Mas unario ( + ) y Menos Unario ( - )
+	a = +3;
+	b = -3;
+	PRINT2(d, a, b);
+	PRINT2(+d, a, b);
+
+	//  Operador Complemento a uno ( ~ )
+	a = 7;
+	PRINT2(d, a, ~a);
+
+	// Operadores Incremento ( ++ ) y decremento ( -- )
+	a = 10;
+	a++;
+	PRINT1(d, a);
+	a = 10;
+	a--;
+	PRINT1(d, a);
+
+	a = 10;
+	++a;
+	PRINT1(d, a);
+	a = 10;
+	--a;
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a++);
+	PRINT1(d, a);
+	a = 10;
+	PRINT1(d, ++a);
+	PRINT1(d, a);
+
+	a = 5; b = 5;
+	PRINT1(d, a++ + b );
+	PRINT2(d, a, b);
+
+	a = 5; b = 5;
+	PRINT1(d, a++ + ++b );
+	PRINT1(d, a + b );
+	PRINT2(d, a, b);
 
 	system("pause");
 	return 0;
