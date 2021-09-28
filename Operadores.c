@@ -45,7 +45,7 @@ void primarios()
 	PRINT1(d, Juanito.edad);
 
 	// Operador flecha (estructuras) ( -> )
-	ptrJuanito = &Juanito;
+	ptrJuanito = &Juanito;		// Guardamos la dirección de memoria de la variable Juanito en la variable ptrJuanito
 	ptrJuanito -> edad = 40;
 	strcpy(ptrJuanito->nombre, "Pedrito López");
 	PRINT1(s, ptrJuanito->nombre);
@@ -76,7 +76,7 @@ int main()
 	a = 0;
 	PRINT2(d, a, !!!!!!!!!!!!!!!!a);
 
-	// Operadores Mas unario ( + ) y Menos Unario ( - )
+	// Operadores Mas unario ( + ) y Menos Unario ( - ) - Unario
 	a = +3;
 	b = -3;
 	PRINT2(d, a, b);
@@ -116,6 +116,28 @@ int main()
 	PRINT1(d, a++ + ++b );
 	PRINT1(d, a + b );
 	PRINT2(d, a, b);
+
+	//  Operador dirección -de memoria- ( & )
+	ptrJuanito = &Juanito;		// Guardamos la dirección de memoria de la variable Juanito en la variable ptrJuanito
+
+	a = 30;
+	ptr = &a;
+	printf("La variable a esta en la dirección de memoria %p y guarda el valor %d \n", &a, a);
+	printf("La variable ptr esta en la dirección de memoria %p y guarda el valor %p \n", &ptr, ptr);
+	printf("El contenido de ptr es: %d\n", *ptr);
+
+	//  Operador indirección -contenido de- ( * )
+	*ptr = 50;
+	printf("La variable a esta en la dirección de memoria %p y guarda el valor %d \n", &a, a);
+	printf("La variable ptr esta en la dirección de memoria %p y guarda el valor %p \n", &ptr, ptr);
+	printf("El contenido de ptr es: %d\n", *ptr);
+
+	// Operador tamaño de...  ( sizeof )
+	printf("El tamaño del tipo de dato char es %d bytes\n", sizeof( char ));
+	printf("El tamaño del tipo de dato int es %d bytes\n", sizeof( int ));
+	printf("El tamaño del tipo de dato float es %d bytes\n", sizeof( float ));
+	printf("El tamaño del tipo de dato double es %d bytes\n", sizeof( double ));
+	printf("La estructura Persona ocupa %d bytes\n", sizeof( struct Persona ));
 
 	system("pause");
 	return 0;
