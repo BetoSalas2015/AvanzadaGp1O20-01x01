@@ -1,4 +1,4 @@
-//  Sesión 17 23/09/2021
+//  Sesión 19 - 29/09/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,7 +52,7 @@ void primarios()
 	PRINT1(d, ptrJuanito->edad);
 }
 
-int main()
+void unarios()
 {
 	// Jerarquía nivel 2 - Operadores Unarios
 	
@@ -126,7 +126,7 @@ int main()
 	printf("La variable ptr esta en la dirección de memoria %p y guarda el valor %p \n", &ptr, ptr);
 	printf("El contenido de ptr es: %d\n", *ptr);
 
-	//  Operador indirección -contenido de- ( * )
+	//  Operador indirección -contenido de- ( * ) - unaria
 	*ptr = 50;
 	printf("La variable a esta en la dirección de memoria %p y guarda el valor %d \n", &a, a);
 	printf("La variable ptr esta en la dirección de memoria %p y guarda el valor %p \n", &ptr, ptr);
@@ -138,6 +138,42 @@ int main()
 	printf("El tamaño del tipo de dato float es %d bytes\n", sizeof( float ));
 	printf("El tamaño del tipo de dato double es %d bytes\n", sizeof( double ));
 	printf("La estructura Persona ocupa %d bytes\n", sizeof( struct Persona ));
+	printf("El apuntador a estructura Persona ocupa %d bytes\n", sizeof( ptrJuanito));
+	printf("un aputador a int ocupa %d bytes\n", sizeof( ptr ));
+
+	//  Operador cast  ( (típo de dato) )
+	//  promoción de tipos (implícita)
+	car = 'a';
+	a = car;			//  char => int
+	e = a;				//  int => float
+	h = e;				//  float => double
+
+	e = h;				//  float <= double (pérdida de datos)
+	a = e;				//  int <= float	(pérdida de datos)
+	car = a;			//  char <= int		(pérdida de datos)
+
+	//  conversión explicita de tipos
+	car = 'a';
+	a = (int) car;				//  char => int
+	e = (float) a;				//  int => float
+	h = (double) e;				//  float => double
+}
+int main()
+{
+	// Jerarquía nivel 3 - Operadores Multiplicativos
+	// Operador multiplicación ( * ) - Binario
+	PRINT1(d, 5 * 2);
+
+	// Operador división ( / ) 
+	//  Divisiójn entera:    entero / entero = entero
+	PRINT1(d, 5 / 2);
+
+	//  División flotante
+	PRINT1(f, 5.0 / 9 * (80 - 32) );
+	PRINT1(f, 5 / 9.0 * (80 - 32) );
+	PRINT1(f, 5.0 / 9.0 * (80 - 32) );
+
+	PRINT1(f, (float) 5 / 2);
 
 	system("pause");
 	return 0;
