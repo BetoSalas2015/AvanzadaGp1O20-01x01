@@ -1,4 +1,4 @@
-//  Sesión 20 - 30/09/2021
+//  Sesión 21 - 05/10/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -233,10 +233,54 @@ void igualdad()
 	// Operador NO igual a  o diferente de ( != )
 	PRINT1(d, 5 != 2);
 }
+void deBits()
+{
+	// Jerarquía nivel 8 - Operador AND de Bits ( & ) - Binaria
+	PRINT1(d, 52 & 59);
+
+	// Jerarquía nivel 9 - Operador XOR de Bits ( ^ ) - Binaria
+	PRINT1(d, 52 ^ 59);
+
+	// Jerarquía nivel 10 - Operador OR de Bits ( | ) - Binaria
+	PRINT1(d, 52 | 59);
+}
+void logicos()
+{
+	// Jerarquía nivel 11 - Operador AND lógico
+	PRINT1(d, 52 && 59);
+	PRINT1(d, 52 && 0);
+
+	// Jerarquía nivel 12 - Operador OR lógico
+	PRINT1(d, 52 || 59);
+	PRINT1(d, 0 || 59);
+}
+
+void condicional() 
+{
+	// Jerarquía nivel 13 - Operador Condicional ( ?: )
+	a = 1;
+	if(a)
+		printf("Es es verdadero!\n");
+	else
+		printf("Esto es falso!\n");
+
+	//     (condición) ? vardadero : falso ;
+	(a) ? printf("Es es verdadero!\n") : printf("Esto es falso!\n"); 
+	
+	a = 10; b = 20;
+	(a > b) ? PRINT1(d, a) : PRINT1(d, b);
+	(a < b) ? PRINT1(d, a) : PRINT1(d, b);
+}
 int main()
 {
-	// Jerarquía nivel 8 - Operadores relacionales
+	// Jerarquía nivel 14 - Operador Condicional ( ?: )
+	// Operador Asignación Simple ( = )
+	a = 0;
 
+	//  Asignación Multiple 
+	a = b = c = d = 10;
+	PRINT4(d, a, b, c, d);
+ 
 	system("pause");
 	return 0;
 }
