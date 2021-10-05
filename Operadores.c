@@ -1,4 +1,4 @@
-//  Sesión 19 - 29/09/2021
+//  Sesión 20 - 30/09/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -158,7 +158,7 @@ void unarios()
 	e = (float) a;				//  int => float
 	h = (double) e;				//  float => double
 }
-int main()
+void multiplicativos()
 {
 	// Jerarquía nivel 3 - Operadores Multiplicativos
 	// Operador multiplicación ( * ) - Binario
@@ -174,6 +174,68 @@ int main()
 	PRINT1(f, 5.0 / 9.0 * (80 - 32) );
 
 	PRINT1(f, (float) 5 / 2);
+
+	//  Operador Módulo o residuo ( % )
+
+	PRINT1(d, 5 % 2);
+	printf("5 %% 2 = %d\n", 5 % 2);
+}
+
+void aditivos()
+{
+	// Jerarquía nivel 4 - Operadores aditivos
+	// Operador Suma ( + ) - Binaria
+	PRINT1(d, 5 + 2);
+
+	// Operador Resta ( - ) - Binaria
+	PRINT1(d, 5 - 2);
+}
+
+void desplazamiento()
+{
+	// Jerarquía nivel 5 - Operadores de desplazamiento
+	// Operador  desplazamiento a la izquierda ( << ) -  * 2
+	a = 52;
+	PRINT1(d, a );
+	PRINT1(d, a << 1);
+	PRINT1(d, a << 2);
+	PRINT1(d, a << 3);
+
+	// Operador desplazamiento a la derecha ( >> ) - / 2
+	a = 416;
+	PRINT1(d, a );
+	PRINT1(d, a >> 1);
+	PRINT1(d, a >> 2);
+	PRINT1(d, a >> 3);
+}
+void relacioanles()
+{
+	// Jerarquía nivel 6 - Operadores relacionales
+	PRINT1(d, 5 > 2); // Operador mayor que... ( > )
+	PRINT1(d, 5 >= 2); // Operador mayor o igual que... ( >= )
+	PRINT1(d, 5 < 2); // Operador Menor que... ( < )
+	PRINT1(d, 5 <= 2); // Operador Menor o igual que... ( <= )
+	printf("5 <= 2 = %d\n", 5 <= 2);
+
+	a = 0;
+	PRINT1(d, !5 > a++);
+	a = 0;
+	PRINT1(d, !5 > ++a);
+	a = 0;
+	PRINT1(d, !!5 > a++);
+}
+void igualdad()
+{
+	// Jerarquía nivel 7 - Operadores relacionales
+	// Operador igual a ( == )
+	PRINT1(d, 5 == 2);
+
+	// Operador NO igual a  o diferente de ( != )
+	PRINT1(d, 5 != 2);
+}
+int main()
+{
+	// Jerarquía nivel 8 - Operadores relacionales
 
 	system("pause");
 	return 0;
