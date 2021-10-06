@@ -1,4 +1,4 @@
-//  Sesión 21 - 05/10/2021
+//  Sesión 22 - 06/10/2021
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -271,7 +271,7 @@ void condicional()
 	(a > b) ? PRINT1(d, a) : PRINT1(d, b);
 	(a < b) ? PRINT1(d, a) : PRINT1(d, b);
 }
-int main()
+void asignacion() 
 {
 	// Jerarquía nivel 14 - Operador Condicional ( ?: )
 	// Operador Asignación Simple ( = )
@@ -280,6 +280,84 @@ int main()
 	//  Asignación Multiple 
 	a = b = c = d = 10;
 	PRINT4(d, a, b, c, d);
+
+	//  Operador Asignación Compuesta
+	a = 10;
+	PRINT1(d, a += 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a -= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a *= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a /= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a %= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a <<= 5);
+	PRINT1(d, a);
+	
+	a = 10;
+	PRINT1(d, a >>= 5);
+	PRINT1(d, a);
+	
+	a = 10;
+	PRINT1(d, a &= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a |= 5);
+	PRINT1(d, a);
+
+	a = 10;
+	PRINT1(d, a ^= 5);
+	PRINT1(d, a);
+}
+void coma()
+{
+	// Jerarquía nivel 15 - Operador Coma ( , )
+	int x1, x2, x3;
+	PRINT4(d, a, b, c, d);
+}
+int main()
+{
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(d, a+=2*a*++b);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+	
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(d, b+=b+b++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(f, e/=d+d*a);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+	//-------------------------------------------------
+
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(f,  !a+!b+(c&&d));
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(f,  a%b*c-d++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(f, d=(a||b)&&(c11(d&&!f)));
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
+
+	a = 3; b = 3; c = 0; d = -1; e = 3.0; f = 2.0;
+	PRINT1(f, d = ++c+++c*d++);
+	PRINT4(d, a, b, c, d); PRINT2(f, e, f); NL;
  
 	system("pause");
 	return 0;
